@@ -13,3 +13,5 @@ print(3.14159)
 
 # Boolean
 # True or False
+
+# Numbers

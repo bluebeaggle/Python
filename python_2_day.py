@@ -21,4 +21,3 @@ new_num_char = str(num_char)
 print(type(new_num_char))
 print("Your name has "+ new_num_char+ " charaters.")
 # str can not combine with int
-

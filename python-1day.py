@@ -20,3 +20,14 @@ print(len(input("Waht is yout name? ")))
 
 #Variable
 #Using temp
+
+# Variables naming rule
+# Variable name = small letters & _
+# Class name = CapWords(Only First Letter Big)
+# Function name = small letters & _ 
+# Method and Instance name = small letters & _
+# private method and instance variable = first letter is _
+# ingerited method ~ = first letter is __(twice)
+# Constants = BIG LETTER and _
+
+

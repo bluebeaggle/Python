@@ -12,3 +12,11 @@ print('e.g print("Hello " + "world")')
 print("New lines can be created with a backslash and n.")
 
 
+#input() function
+input("What is your name?")
+print("Hello "+input("What is your a.ka.?"))
+print(len(input("Waht is yout name? ")))
+
+
+#Variable
+#Using temp

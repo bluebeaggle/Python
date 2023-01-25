@@ -13,7 +13,7 @@ print(3.14159)
 
 # Boolean
 # True or False
-
+print("------------------------")
 # Numbers
 num_char = len(input("What is your name?"))
 print(type(num_char))
@@ -21,3 +21,16 @@ new_num_char = str(num_char)
 print(type(new_num_char))
 print("Your name has "+ new_num_char+ " charaters.")
 # str can not combine with int
+print("------------------------")
+# Mathmatical Operater
+print("Mathmatical Operater")
+print("7-3 :",7-3)
+print("7+3 :",7+3)
+print("100*3 :", 100*3)
+print("100**3 :",100**3)
+print("100/3  :",100/3,"(auto float type translate)")
+print("100//3 :",100//3)
+print("100%3 :",100%3)
+print("순서 : 괄호 > 지수(**) > 곱셈,나눗셈(*,/) > 덧셈,뺄셈(+,-)")
+print("------------------------")
+

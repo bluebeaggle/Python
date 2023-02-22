@@ -35,6 +35,24 @@ computer_choice = random.randint(0,2)
 print(competition[user_choice])
 print("Computer chose:")
 print(competition[computer_choice])
-
-print(competition[user_choice].index)
-
+if computer_choice == 0 :
+    if user_choice==1:
+        print("You win")
+    elif user_choice==2:
+        print("You lose")
+    else :
+        print("You tie")
+elif computer_choice == 1:
+    if user_choice==1:
+        print("You tie")
+    elif user_choice==2:
+        print("You win")
+    else :
+        print("You lose")
+else :
+    if user_choice==1:
+        print("You lose")
+    elif user_choice==2:
+        print("You tie")
+    else :
+        print("You win") 

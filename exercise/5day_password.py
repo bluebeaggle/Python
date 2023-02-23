@@ -49,3 +49,17 @@ while(True) :
             password += random.choice(choice)
             symbol_count +=1
 print(password)
+
+
+password_list= []
+for i in range(nr_letters) :
+    password_list.append(letters[random.randrange(0,len(letters))])
+for i in range(nr_symbols) :
+    password_list += symbols[random.randrange(0,len(symbols))]
+for i in range(nr_numbers) :
+    password_list += numbers[random.randrange(0,len(numbers))]
+random.shuffle(password_list)
+password = ''
+for i in password_list :
+    password += i
+print(password)

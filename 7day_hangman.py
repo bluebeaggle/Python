@@ -32,3 +32,16 @@ while(True) :
         break
     print(life)
     print(question)
+    
+chosen_word = random.choice(word_list)
+display = []
+for letter in chosen_word :
+    display += '_'
+    
+guess = input("Geuss a letter : ").lower()
+for letter in chosen_word:
+    if letter == guess :
+        print("Right")
+    else :
+        print("Wrong")
+

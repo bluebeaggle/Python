@@ -1,63 +1,94 @@
+#Step 4
+
 import random
-word_list=["ardvark", "baboon", "camel"]
 
-# game_start = random.choice(word_list)
-# hangman=[]
-# for i in game_start :
-#     hangman.append(i)
-# question = []
-# for i in range(len(hangman)) :
-#     question.append("- ")
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
 
-# print(hangman)
-# print(question)
-
-# life = 5
-
-# while(True) :
-#     customer_input=input("Guess ? \n")
-#     if customer_input in hangman :
-#         for i in range(len(hangman)) :
-#             if customer_input is hangman[i] :
-#                 question[i] = customer_input
-#     else :
-#         life -=1
-#         if life == 0:
-#             print(f"Your life is {life}")
-#             print("You lose")
-#             break
-#     if "- " not in question :
-#         print(question)
-#         print("Success!")
-#         break
-#     print(life)
-#     print(question)
-    
-    
-    
-    
+end_of_game = False
+word_list = ["ardvark", "baboon", "camel"]
 chosen_word = random.choice(word_list)
+lives = 6
+
+
+print(f'Pssst, the solution is {chosen_word}.')
+
 display = []
-for letter in chosen_word :
-    display += '_'
+for _ in range(len(chosen_word)):
+    display += "_"
 
-print(display)
+while not end_of_game:
+    guess = input("Guess a letter: ").lower()
 
+    for position in range(len(chosen_word)):
+        letter = chosen_word[position]
+        if letter == guess:
+            display[position] = letter
+    
+    if guess not in chosen_word :
+        lives -= 1
+        if lives == 0 :
+            end_of_game = True
+            print("You lose")
+        
+    print(f"{' '.join(display)}")
 
+    if "_" not in display:
+        end_of_game = True
+        print("You win.")
 
-def question() :
-    guess = input("Geuss a letter : ").lower()
-    for i in range(len(chosen_word)) :
-        letter = chosen_word[i]
-        if letter == guess :
-            display[i] = letter
-    print(display)
-
-while(True) :
-    if '_' in display :
-        question()
-    else :
-        print("You win!")
-        break
-
-
+    #TODO-3: - print the ASCII art from 'stages' that corresponds to the current number of 'lives' the user has remaining.
